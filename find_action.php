@@ -59,15 +59,15 @@ $headers = array(
  
    //echo  $url = sprintf("%s?%s", $baseurl, http_build_query($data));
    //echo $url = "http://nsumbrz.com/public/admin/journey/api/found_something?KEY=APIKEY1234&brand_id=1&qr_code=GX6B3X69029&mobile_no=9648036911&name=Devendra&email_id=devcodescript@gmail.com&pincode=224227&state=1&city=1&address1=test &address2=test2&message=found in delhi";
-   echo $url = "https://nsumbrz.com/public/admin/journey/api/new_registration?KEY=APIKEY1234&brand_id=1&qr_code=$qr_code&mobile_no=$mobile_no&name=$name&email_id=$email&pincode=$pincode&state=$state&city=$city&address1=$address1&address2=$address2&message=$message";
+    $url = "https://nsumbrz.com/public/admin/journey/api/new_registration?KEY=APIKEY1234&brand_id=1&qr_code=$qr_code&mobile_no=$mobile_no&name=".urlencode($name)."&email_id=$email&pincode=$pincode&state=$state&city=$city&address1=".urlencode($address1)."&address2=".urlencode($address2)."&message=".urlencode($message);
   $response= Send_request_server2($url,$headers,0,$data=array());
 $result=json_decode($response);
 
-  echo $response.'<br>'; die;
+  
   $result=json_decode($response);
-  print_r($result);  //die;
+  
     if(!empty($result)){
-      echo $status= $result->status;
+      $status= $result->status;
      $message=$result->msg; 
        if($status=1){
            echo 'Thanks For Update Us You Have Found Something. Authorised Person will Contact Soon';

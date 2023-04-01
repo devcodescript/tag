@@ -8,7 +8,7 @@ $city= $_POST['city'];
 $pincode= $_POST['pincode'];
 $address1= $_POST['address1'];
 $address2= $_POST['address2'];
-$qr_code= $_POST['qr_code'];
+$qr_code= !empty($_POST['qr_code'])?$_POST['qr_code']:'abc';
 if(empty($qr_code)){
     $qr_code='abc';
 }
@@ -19,6 +19,7 @@ function Send_request_server2($url,$headers,$method,$data=array())
        // if($this->_isCurl()){
             if($method==0){
                 $method ='GET';
+                
             }else{
                 $method='POST';
             }
@@ -47,7 +48,7 @@ function Send_request_server2($url,$headers,$method,$data=array())
         /*}else{
             $response = file_get_contents($url);
         }*/
-        
+                    
     return $response;
         }
 
@@ -63,7 +64,7 @@ $headers = array(
     );*/
    //echo  $url = sprintf("%s?%s", $baseurl, http_build_query($data));
    //echo $url = "https://nsumbrz.com/public/admin/journey/api/new_registration?KEY=APIKEY1234&brand_id=1&qr_code=GX6B3X69029&mobile_no=9648036911&name=Devendra&email_id=devcodescript@gmail.com&pincode=224227&state=1&city=1&address1=test&address2=test2";
-    $url = "https://nsumbrz.com/public/admin/journey/api/new_registration?KEY=APIKEY1234&brand_id=1&qr_code=$qr_code&mobile_no=$mobile_no&name=$name&email_id=$email&pincode=$pincode&state=$state&city=$city&address1=$address1&address2=$address2";
+    $url = "https://nsumbrz.com/public/admin/journey/api/new_registration?KEY=APIKEY1234&brand_id=1&qr_code=$qr_code&mobile_no=$mobile_no&name=".urlencode($name)."&email_id=$email&pincode=$pincode&state=$state&city=$city&address1=".urlencode($address1)."&address2=".urlencode($address2);
   $response= Send_request_server2($url,$headers,0,$data=array());
 $result=json_decode($response);
 //print_r($result);
@@ -71,20 +72,20 @@ $result=json_decode($response);
   echo "cURL Error #:" . $err;
 } else {*/
   //echo $response.'<br>';
-  $result=json_decode($response);
- // print_r($result);  //die;
+ $result=json_decode($response);
+  
     if(!empty($result)){
        $status= $result->status;
      $message=$result->msg; 
        if($status=1){
            echo $name.' Thanks For Registartion. Your Registered Mobile No is '.$mobile_no;
           
-           header("Location: https://nsumbrz.com/z/success.php");
+           header("Location: https://nsumbrz.com/z2/success.php");
             exit();
        }else{
            echo 'Please Try Again For Registartion';
           // echo 'error page call';
-          header("Location: https://nsumbrz.com/z/error.php");
+          header("Location: https://nsumbrz.com/z2/error.php");
           exit();
        }
     }

@@ -1,0 +1,73 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+* { box-sizing: border-box; }
+html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, header, footer, section, aside, nav, article, figure, address, audio, video { background: transparent; border: 0; margin: 0; padding: 0; outline: 0; list-style-type:none; }
+html { min-height: 100%; position: relative; }
+body { font-family: 'Open Sans', sans-serif; font-size: 18px; color: #313131; font-weight: 400; text-decoration: none; overflow-x: hidden; }
+h1, h2, h3, h4, h5, h6 { color: #313131; margin-bottom: 15px; font-family: 'Open Sans', sans-serif; font-weight: 700; }
+input, button { font-family: 'Open Sans', sans-serif; }
+button:focus { outline: none; box-shadow: none; }
+:focus { outline: none; }
+a:focus { outline: none; }
+p { margin-bottom: 30px; line-height: 36px; }
+img { border: none; outline: none; }
+a { color: #122a7a; text-decoration: none; outline: none; transition: all 0.5s ease 0s; -ms-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s; text-decoration: underline; }
+button, input[type="button"], button:hover, input[type="button"]:hover {  transition: all 0.5s ease 0s; -ms-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s; }
+a:hover, a:focus { color: #f37435; text-decoration: none; outline: none; transition: all 0.5s ease 0s; -ms-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s; }
+.relative { position: relative; }
+.formarea-control select, .formarea-control input, .formarea-control textarea { -webkit-appearance: auto; padding: 10px; box-shadow: inset 0 1px 5px rgba(0,0,0,.2); }
+.formarea-control .form-control { margin-bottom: 20px; }
+textarea { resize: none; }
+
+.left-area { background: url(../images/left-bg.png) no-repeat center top #ebebeb; background-size: cover; }
+.left-area, .right-area { height: 100vh;  }
+.left-inner-cnt, .right-inner-cnt { display: flex; flex-direction: column; justify-content: center; height: 100vh; padding: 0 30px;  }
+.screen1, .screen2, .screen3 { max-width: 500px; margin: auto; }
+.logo { text-align: center; }
+.logo img { max-width: 100%; }
+.left-part-hd h1 { font-size: 26px; text-transform: uppercase; font-weight: 500; text-align: center; margin: 40px 0; line-height: 36px; }
+.left-part-hd h1 span { font-weight: 700; color: #f37435; }
+.card-img { text-align: center; }
+.card-img img { max-width: 100%; width: auto !important; margin: auto; margin-bottom: 40px; }
+.card-desc { font-size: 17px; max-width: 420px; margin: auto; }
+.owl-theme .owl-nav.disabled+.owl-dots { margin-top: 30px; }
+.owl-theme .owl-dots .owl-dot span { border-radius: 0; margin: 0 3px; background: #b8c3db; }
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span { background: #122a7a; }
+.copyright { position: absolute; bottom: 20px; text-align: center; width:100%; font-size: 14px; font-weight: 500; }
+h2.cmn-hd { font-size: 24px; font-weight: 600; text-align: center; }
+.sendotp-img { margin: 40px 0; text-align: center; }
+.sendotp-img img { max-width: 100%; }
+.sendotp-txt { font-size: 23px; text-align: center; color: #6e6e6e; font-weight: 500; margin-bottom: 40px; }
+.sendotp-form { background: #fff; border-radius: 40px; box-shadow: 0px -10px 10px rgba(0,0,0,.03); padding: 20px 10px; display: flex; align-items: center; justify-content: space-between; }
+.cmn-btn { cursor: pointer; background: #f37435; height: 70px; padding: 0 20px; font-size: 24px; color: #fff; border: none; border-radius: 20px; text-transform: uppercase; min-width: 190px; font-weight: 500;  }
+.cmn-btn:hover { background: #122a7a; }
+.cmn-btn-blue { cursor: pointer; background: #122a7a; height: 70px; padding: 0 30px; font-size: 24px; color: #fff; border: none; border-radius: 20px; text-transform: uppercase; min-width: 190px; font-weight: 500;  }
+.cmn-btn-blue:hover { background: #f37435; }
+.phone-label { font-size: 14px; font-weight: 600; color: #808080; margin-bottom: 5px; }
+.phone-input span { font-weight: 600; color: #808080; margin-right: 20px; font-size: 20px; }
+.phone-input input { padding: 0; border: 0; box-shadow: none; width: 200px; font-size: 20px; font-weight: 500; color: #000; }
+.verify-form input { width: 30px; text-align: center; font-size: 21px; color: #5a5a5a; background: #f6f5fa; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,.15); border: none;  margin: 0 10px; padding: 0; width: 56px; height: 60px; font-weight: 600;}
+.codesent-txt { font-size: 19px; text-align: center; color: #6e6e6e; font-weight: 500; margin-bottom: 40px; margin-top: 50px;  }
+.otp-request { text-align: center; margin-top: 80px; margin-bottom: 30px; color: #707070; font-weight: 500; }
+.green-txt { color: #4cb74f; } 
+.successfully-header { background: #122a7a; position: absolute; top: 0; left: 0; width: 100%; color: #fff; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+.header-cnt  { font-weight: 600; }
+.header-cnt span  { color: #337ab6; }
+.otpverified-btn { width: 410px; margin: auto; margin-top: 60px; }
+.otpverified-btn ul li { margin-bottom: 20px; }
+.otpverified-btn ul li:last-child { margin-bottom: 0; }
+.otpverified-btn ul li a { height: 65px; display: block; border-radius: 20px; color: #fff; text-transform: uppercase; font-weight: 500; background-color: #359838; background-image: linear-gradient(#48b24b, #28852b); text-align: center; text-decoration: none; line-height: 65px; }
+.otpverified-btn ul li a:hover {  background-color: #bebc44; background-image: linear-gradient(#d9d648, #a19f3f);  }
+.otpverified-btn ul li a.btn-reverse { height: 65px; display: block; border-radius: 20px; color: #fff; text-transform: uppercase; font-weight: 500; background-color: #bebc44; background-image: linear-gradient(#d9d648, #a19f3f);  text-align: center; text-decoration: none; line-height: 65px; }
+.otpverified-btn ul li a.btn-reverse:hover { background-color: #359838; background-image: linear-gradient(#48b24b, #28852b);  }
+h2.cmn-hd1 { font-size: 24px; font-weight: 500; line-height: 34px; margin-bottom: 40px; }
+h2.cmn-hd1 span { font-weight: 700; }
+.message-owner { margin-bottom: 30px; }
+h3.cmn-hd { font-size: 17px; color: #464646; font-weight: 700; margin-bottom: 30px; }
+.form-label { font-size: 16px; font-weight: 600; color: #464646; }
+.cityname { width: 56%; display: inline-block; vertical-align: middle; }
+.pincode { width: 38%; display: inline-block; vertical-align: middle; float: right; }
+.btn-gray { height: 45px; display: inline-block; border-radius: 50px; color: #fff; text-transform: uppercase; font-weight: 500; background-color: #6c6c6c; background-image: linear-gradient(#606060, #767676); text-align: center; text-decoration: none; line-height: 45px; min-width: 150px; padding: 0 20px; border: none; margin: 0 10px; font-size: 19px; font-weight: 600; }
+.btn-gray:hover {  background-color: #bebc44; background-image: linear-gradient(#767676, #606060);  }
+.btn-green { height: 45px; display: inline-block; border-radius: 50px; color: #fff; text-transform: uppercase; font-weight: 500; background-color: #379a3a; background-image: linear-gradient(#47b04a, #27852b); text-align: center; text-decoration: none; line-height: 45px; min-width: 150px; padding: 0 20px; border: none; margin: 0 5px; font-size: 19px; font-weight: 600;  }
+.btn-green:hover {  background-color: #bebc44; background-image: linear-gradient(#27852b, #47b04a);  }
